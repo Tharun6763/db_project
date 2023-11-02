@@ -1,0 +1,52 @@
+/* Your CSS file */
+.LOGIN {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('../components/assets/dashboard1jpg.jpg') center/cover no-repeat fixed;
+    font-family: Arial, sans-serif;
+}
+
+.logintext {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #fff;
+    /* Text color, adjust as needed for visibility on the background */
+}
+
+.loginform {
+    background-color: rgba(128, 16, 16, 0.8);
+    /* Form background color with transparency */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    /* margin: 70px 50px 50px 0px; */
+}
+
+.input-ele {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.loginbutton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.loginbutton:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,62 @@
+/* admin_dashboard.css */
+
+.admin-container {
+    display: flex;
+    /* Use flexbox to create a row layout */
+    justify-content: flex-start;
+    /* align-content: ; */
+    /* Align the container's content to the start (left) */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    /* border-color: #1e7e34; */
+    /* border-width:50px; */
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    /* Arrange buttons in a column layout */
+    align-items: flex-start;
+    /* Align buttons to the start (left) within the column */
+}
+
+.getcomp {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.getcomp:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the "update roles" button */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1e7e34;
+}
+
+.admin-div{
+    display: flex;
+}

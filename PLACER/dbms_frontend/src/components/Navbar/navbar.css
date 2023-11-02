@@ -1,0 +1,95 @@
+.navbar{
+    display:flex;
+    justify-content: space-around;
+    padding: 5px;
+    background-color:rgb(220, 203, 203);
+    /* box-shadow: 5px 10px 30px -2px rgb(75, 209, 120); */
+}
+.nav-logo {
+    text-align:left;
+    margin:0px 900px 0px 0px;
+}
+.nav-menu {
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    list-style:none;
+    gap:50px;
+    color:rgba(95, 42, 165, 0.827);
+    font-weight: bold;
+    cursor:pointer;
+}
+nav-menu hr{
+    border: none;
+    width:80%;
+    /* hight:5px; */
+    border-radius: 20px;
+
+}
+/* styles.css */
+
+.image-style {
+    width: 1700px;
+    /* Set the width as needed */
+    height: 800px;
+    /* Maintain the aspect ratio */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #888888;
+}
+     
+
+.nav-logo h1{
+    align-items: flex-start;
+}
+
+.nav-menu li{
+    font-size: 20px;
+}
+
+
+/* .nav-logo img {
+    max-height: 30%;
+    max-width: 50%;
+}  */
+
+.text-center {
+    text-align: center;
+}
+
+.timeline-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100px; */
+    /* Set the desired size for the circle */
+    height: 100px;
+    /* Set the desired size for the circle */
+    border-radius: 50%;
+    /* Make it a circle */
+    overflow: hidden;
+    border: 2px solid var(--bs-primary);
+    /* background-color: #888888; */
+    /* You can use your custom variables here */
+}
+
+.rounded-circle{
+    width:100px;
+    height:100px;
+}
+
+.timeline-heading{
+    text-align: center;
+}
+
+.timeline-panel{
+    margin:20px 400px 20px 400px;
+}
+
+.timeline{
+    list-style:none;
+}
+
+body {
+    caret-color: transparent;
+}

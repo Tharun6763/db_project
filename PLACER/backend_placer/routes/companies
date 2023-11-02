@@ -1,0 +1,95 @@
+const express=require('express');
+const connection=require('../connection');
+const router=express.Router();
+ var auth=require('../services/authentication');
+ var checkRole=require('../services/checkrole');
+
+//to add the new companies
+router.post('/add',auth.authenticateToken,checkRole.checkRole,(req,res)=>
+{
+    let com=req.body;
+    let query="insert into companies(comp_name,company_salary,comp_email,type,status)values(?,?,?,?,'true')";
+    connection.query(query,[com.comp_name,com.company_salary,com.comp_email,com.type],(err,result)=>
+    {
+        if(!err)
+        {
+            return res.status(200).json({message:"company added sucessfully"});
+        }else{
+            return res.status(500).json(err);
+        }
+    })
+})
+
+router.get('/get',auth.authenticateToken,
+(req,res,next)=>
+{
+    var query="select * from companies order by comp_name";
+    connection.query(query,(err,results)=>{
+    if(!err)
+    {
+        return res.status(200).json(results);
+    }else{
+        return res.status(500).json(err);
+    }
+    })
+    
+})
+
+router.get('/getbyType',auth.authenticateToken,(req,res,next)=>{
+    var comp=req.body;
+    let query="select * from companies where type=?";
+    connection.query(query,[comp.type],(err,results)=>
+    {
+        if(!err)
+        {
+            return res.status(200).json(results);
+        }else{
+            return res.status(500).json(err);
+        }
+    })
+})
+
+router.patch('/update',auth.authenticateToken,checkRole.checkRole,(req,res,next)=>
+{
+    let com=req.body;
+    var query="update companies set status=? where comp_id=?";
+    connection.query(query,[com.status,com.comp_id],(err,results)=>
+    {
+        if(!err)
+        {
+            if(results.affected==0)
+            {
+                return res.status(404).json({message:"NO company EXIST WITH THIS ID "});
+            }else{
+                return res.status(200).json({message:"updated successfully"});
+            }
+
+        }else{
+            return res.status(500).json(err);
+        }
+    })
+})
+
+router.delete('/delete', auth.authenticateToken, (req, res) => {
+  const id = req.body.id; // Assuming the id is sent as a query parameter, e.g., /deleteById?id=123
+
+  if (!id) {
+    return res.status(400).json({ message: "Missing 'id' parameter" });
+  }
+
+  let query = "DELETE FROM companies WHERE comp_id=?";
+  connection.query(query, [id], (err, results) => {
+    if (!err) {
+      if (results.affectedRows === 0) {
+        return res.status(404).json({ message: "ID not found" });
+      } else {
+        return res.status(200).json({ message: "Deleted successfully" });
+      }
+    } else {
+      return res.status(500).json(err);
+    }
+  });
+});
+
+
+module.exports=router;

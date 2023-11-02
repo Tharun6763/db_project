@@ -1,0 +1,83 @@
+/* your-css-file.css */
+/* body {
+    margin: 0;
+    padding: 0;
+    background: url('../components/assets/dashboard1jpg.jpg') center/cover no-repeat fixed;
+    font-family: Arial, sans-serif;
+} */
+.changepassword {
+        margin: 0;
+        padding: 0;
+        width:100%;
+        /* display: flex; */
+        background: url('../components/assets/dashboard1jpg.jpg') center/cover no-repeat fixed;
+}
+.addcomp {
+    margin: 0;
+        padding: 0;
+        background: url('../components/assets/dashboard1jpg.jpg') center/cover no-repeat fixed;
+        font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Background overlay color with transparency */
+}
+.loginform{
+    margin:130px 600px 0px 600px;
+}
+.loginbutton{
+    margin:40px 10px 10px 150px;
+}
+.addcomphead {
+    font-size: 24px;
+    color: #903838;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.addform {
+    /* background: rgba(255, 255, 255, 0.9); */
+    /* Background color with transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.input-ele {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 50px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.select-ele {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.addbutton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin:50px 20px 0px 0px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-select{
+ margin:10px 40px 0px 10px;
+    width:85%;
+    padding:10px;
+    /* height:100%; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

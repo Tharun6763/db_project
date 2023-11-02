@@ -1,0 +1,42 @@
+/* student.css */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.admin-div {
+    width: 1700px;
+    /* Set the width as needed */
+    height: 1000px;
+    /* Set the height as needed */
+    background-image: url('../components/assets/dashboard1jpg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.admin-container {
+    /* max-width: 1200px; */
+    margin: 0 ;
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.getcomp {
+    background-color: #101011;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.getcomp a {
+    color: #fff;
+}
